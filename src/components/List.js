@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 // import './List.css';
 
 function List() {
-    const [word, setWord] = useState();
+    const [head, setHead] = useState();
+    const [tail, setTail] = useState();
+    const [list, setList] = useState([]);
     const handleSubmit = (e)=> {
         e.preventDefault();
-        alert('hh')
+        setList(list => [...list, {head,tail}]);
     }
 
     return (
         <div className="List">
            <form onSubmit={handleSubmit}>
                <input type='text'
-               onChange={(e) => setWord({head: e.target.value})}/>
+               onChange={(e) => setHead(e.target.value)}/>
                <input type='text'
-                      onChange={(e) => setWord({tail: e.target.value })} />
+                      onChange={(e) => setTail( e.target.value)} />
                <input
                    type='submit'
                />
