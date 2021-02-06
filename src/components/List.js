@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import './List.css';
 
 function List() {
     const [head, setHead] = useState();
@@ -7,7 +6,8 @@ function List() {
     const [list, setList] = useState([]);
     const handleSubmit = (e)=> {
         e.preventDefault();
-        setList(list => [...list, {head,tail}]);
+        setList(list => [...list, {head,tail,done: false}]);
+        localStorage.setItem('listInLocalStorage',JSON.stringify(list));
     }
 
     return (
@@ -21,6 +21,8 @@ function List() {
                    type='submit'
                />
            </form>
+            {list && list.map((item,index) => <li key={index}><span>{item.head}</span>
+           <span>{item.tail}</span></li>)}
         </div>
     );
 }
