@@ -12,6 +12,7 @@ function List() {
 
     return (
         <div className="List">
+            <h2>FlashCard: add your words which you want to memorize</h2>
            <form onSubmit={handleSubmit}>
                <input type='text'
                onChange={(e) => setHead(e.target.value)}/>
