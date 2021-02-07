@@ -1,28 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function Card() {
     const [value, setValue] = useState(JSON.parse(localStorage.getItem('listInLocalStorage')));
     const [number, setNumber] = useState(0);
-    const [card, setCard] = useState(false);
+    const [turn, setTurn] = useState();
 
     const handleClick = (e) => {
         e.preventDefault();
-        setCard(true)
         setValue(JSON.parse(localStorage.getItem('listInLocalStorage')))
     }
-
-    function handleCardClick (location){
-       const loc =  value.find(item => item.head === location)
-        loc.done = !loc.done;
-        value.filter(v => v.done === false && [...value])
-    }
+    const card = value[number]
     return(
         <div>
             <button onClick={handleClick} >start</button>
-            {card && value.map((v, index) =>
-                <div key={index}>{v.head}
-                <button onClick={() => handleCardClick(v.head)}>next</button></div>)
-            }
+            {turn? card.head : card.tail}
+            <button onClick={() => setTurn(!turn)}>check</button>
+            <button onClick={() => setNumber(number + 1)}>next</button>
         </div>
     )
 }
