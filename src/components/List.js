@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './List.css'
 
 function List() {
     const [head, setHead] = useState();
@@ -12,7 +13,7 @@ function List() {
 
     return (
         <div className="List">
-            <h2>FlashCard: add your words which you want to memorize</h2>
+            <h2>FlashCard</h2>
            <form onSubmit={handleSubmit}>
                <input type='text'
                onChange={(e) => setHead(e.target.value)}/>
@@ -20,10 +21,13 @@ function List() {
                       onChange={(e) => setTail( e.target.value)} />
                <input
                    type='submit'
+                   className='submit'
                />
            </form>
-            {list && list.map((item,index) => <li key={index}><span>{item.head}</span>
-           <span>{item.tail}</span></li>)}
+            <ul>
+            {list && list.map((item,index) => <li key={index}><p>{item.head}</p>
+           <p>{item.tail}</p></li>)}
+            </ul>
         </div>
     );
 }

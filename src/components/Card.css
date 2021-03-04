@@ -1,0 +1,22 @@
+.Card button {
+    height: 25px;
+    width: 200px;
+    border-radius: 25px;
+    background-color: #61dafb;
+    border: none;
+    box-shadow: 2px 2px #888888;
+    pointer-events: auto;
+}
+
+button:focus {
+    outline:0;
+}
+
+.Card .field {
+    display: flex;
+    flex-direction: column;
+}
+
+.Card .field button {
+    margin: 10px auto;
+}

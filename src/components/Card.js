@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Card.css'
 
 function Card() {
     const [value, setValue] = useState(JSON.parse(localStorage.getItem('listInLocalStorage')));
@@ -10,19 +11,24 @@ function Card() {
         e.preventDefault();
         setValue(JSON.parse(localStorage.getItem('listInLocalStorage')))
         setVisibility(!visibility)
-        console.log(visibility)
     }
-    const card = value[number]
+    const card = value && value[number]
     return(
-        <div>
-            <button onClick={handleClick} >start</button>
-            {value && visibility &&
-            (turn ? card.head : card.tail)
+        <div className='Card'>
+            <button onClick={handleClick} >Start FlashCard</button>
+            {visibility &&
+                <div className='field'>
+            {value && (number < value.length )?
+            (turn ? card.tail : card.head)
+                : <p>end</p>
             }
-            <button onClick={() => setTurn(!turn)}>check</button>
-            <button onClick={() => setNumber(number + 1)}>next</button>
+            <div className='buttons'>
+                <button onClick={() => setTurn(!turn)}>check</button>
+                <button onClick={() => setNumber(number + 1)}>next</button>
+            </div>
+                </div>
+            }
         </div>
-    )
+    );
 }
-
 export default Card;

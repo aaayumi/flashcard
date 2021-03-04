@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507634dc-2676-46f3-b3ad-a763d61e6682" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/List.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
@@ -43,7 +45,8 @@
       <option name="presentableId" value="Default" />
       <updated>1612272946254</updated>
       <workItem from="1612272949060" duration="1395000" />
-      <workItem from="1612347022168" duration="9168000" />
+      <workItem from="1612347022168" duration="12501000" />
+      <workItem from="1614853696146" duration="715000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.List h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+.List input {
+    height: 20px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.List .submit {
+    height: 25px;
+    width: 100px;
+    border-radius: 25px;
+    background-color: #61dafb;
+    border: none;
+    box-shadow: 2px 2px #888888;
+    pointer-events: auto;
+}
+
+.List .submit:hover {
+    background-color: dodgerblue;
+}
+
+.List .submit:focus {outline:0;}
+
+.List ul {
+    padding: 0 20%;
+    text-align: left;
+}
+
+.List ul li {
+    list-style: none;
+    display: flex;
+}
+
+.List ul li p {
+    width: 200px;
+}
